@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import App from './components/App';
+import Baselayout from './components/Baselayout';
+import AddBook from './components/AddBook';
+import './components/Styles.css'
+import reducer from './store/reducer'
+import {createStore} from 'redux'
+import { Provider } from 'react-redux';
+
+const store=createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+    <BrowserRouter>
+      <Baselayout>
+        <Switch>
+          <Route exact path='/' component={App}></Route>
+          <Route path='/add-book' component={AddBook}></Route>
+        </Switch>
+      </Baselayout>
+    </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

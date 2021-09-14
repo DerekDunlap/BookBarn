@@ -1,0 +1,59 @@
+body{
+    height: 100%;
+}
+
+#header-container{
+    display: flex;
+    width: 100%;
+    background-color: lightgray;
+    height: 5vh;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#header-container h1{
+    margin: 0%;
+    position: relative;
+    left: 2%;
+    width: 15%;
+}
+
+#menuBtnDiv{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 2%;
+    width: 40%;
+}
+
+#menuBtnDiv button{
+    width: 20%;
+    border: none;
+    background-color: inherit;
+}
+
+#searchDiv{
+    position: relative;
+    left: 4%;
+    top: 20%;
+    width: 30%;
+    height: 60%;
+}
+
+#searchDiv input{
+    width: 70%;
+}
+
+#loginBtnDiv{
+    position: relative;
+    display: flex;
+    width: 8%;
+    justify-content: space-between;
+    left: 4%;
+}
+
+
+#loginBtnDiv button{
+    border: none;
+    background-color: inherit;
+}
